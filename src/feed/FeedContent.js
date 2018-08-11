@@ -1,10 +1,17 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { FlatList } from 'react-native';
+
+import FeedContentItem from 'feed/FeedContentItem';
 
 class FeedContent extends React.Component {
   render() {
+    const keyedFeedItems = this.props.feedItems.map(item => ({ key: item }));
+
     return (
-      <Text>{this.props.feed}</Text>
+      <FlatList
+        data={keyedFeedItems}
+        renderItem={({item}) => <FeedContentItem item={item.key} />}
+      />
     );
   }
 }
