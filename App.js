@@ -1,10 +1,10 @@
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import React from "react";
+import { StyleSheet, View } from "react-native";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
 
-import RssReaderMobileApp from 'RssReaderMobileApp';
-import AppReducer from 'AppReducer';
+import RssReaderMobileApp from "RssReaderMobileApp";
+import AppReducer from "AppReducer";
 
 export default class App extends React.Component {
   store = createStore(AppReducer);
@@ -23,7 +23,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    alignItems: "center",
+    justifyContent: "center"
+  }
 });

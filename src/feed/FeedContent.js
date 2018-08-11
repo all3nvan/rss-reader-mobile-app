@@ -1,7 +1,7 @@
-import React from 'react';
-import { FlatList } from 'react-native';
+import React from "react";
+import { FlatList } from "react-native";
 
-import FeedContentItem from 'feed/FeedContentItem';
+import FeedContentItem from "feed/FeedContentItem";
 
 class FeedContent extends React.Component {
   render() {
@@ -10,7 +10,7 @@ class FeedContent extends React.Component {
     return (
       <FlatList
         data={keyedFeedItems}
-        renderItem={({item}) => <FeedContentItem item={item.key} />}
+        renderItem={({ item }) => <FeedContentItem item={item.key} />}
       />
     );
   }

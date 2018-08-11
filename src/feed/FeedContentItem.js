@@ -1,13 +1,9 @@
-import React from 'react';
-import { Text } from 'react-native';
+import React from "react";
+import { Text } from "react-native";
 
 class FeedContentItem extends React.Component {
   render() {
-    return (
-      <Text>
-        {this.props.item}
-      </Text>
-    );
+    return <Text>{this.props.item}</Text>;
   }
 }
 

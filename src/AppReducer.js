@@ -1,9 +1,9 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
 
 const noopReducer = (state = {}, action) => {
   return state;
 };
 
-const AppReducer = combineReducers({ noopReducer })
+const AppReducer = combineReducers({ noopReducer });
 
 export default AppReducer;
