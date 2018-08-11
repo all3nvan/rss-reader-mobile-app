@@ -1,9 +1,9 @@
 import React from 'react';
-import RssReaderMobileApp from './RssReaderMobileApp';
+import App from './App';
 
 import renderer from 'react-test-renderer';
 
 it('renders without crashing', () => {
-  const rendered = renderer.create(<RssReaderMobileApp />).toJSON();
+  const rendered = renderer.create(<App />).toJSON();
   expect(rendered).toBeTruthy();
 });
