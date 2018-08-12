@@ -5,9 +5,17 @@ import FeedContentItem from "feed/FeedContentItem";
 
 class FeedContent extends React.Component {
   render() {
-    return this.props.feedItems.map(item => (
-      <FeedContentItem key={item} item={item} />
-    ));
+    const keyedFeedItems = this.props.feedItems.map(item => ({
+      key: item.title,
+      item: item
+    }));
+
+    return (
+      <FlatList
+        data={keyedFeedItems}
+        renderItem={({ item }) => <FeedContentItem item={item.item} />}
+      />
+    );
   }
 }
 

@@ -1,15 +1,14 @@
 import React from "react";
-import { StyleSheet, WebView } from "react-native";
+import { StyleSheet, Text } from "react-native";
 
 class FeedContentItem extends React.Component {
   render() {
     return (
-      <WebView
-        source={{ uri: this.props.item }}
-        style={styles.contentItem}
-        startInLoadingState={true}
-        scalesPageToFit={true}
-      />
+      <Text>
+        <Text>{this.props.item.title}</Text>
+        <Text>{this.props.item.link}</Text>
+        <Text>{this.props.item.description}</Text>
+      </Text>
     );
   }
 }
