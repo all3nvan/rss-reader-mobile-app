@@ -21,7 +21,7 @@ class FeedItem extends React.Component {
             <Text style={styles.title}>{this.props.item.title}</Text>
           </View>
           <View>
-            <Text>{this.props.item.description}</Text>
+            <Text>{this.props.item.summary}</Text>
           </View>
         </View>
       </TouchableHighlight>
