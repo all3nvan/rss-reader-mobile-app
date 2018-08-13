@@ -1,9 +1,11 @@
 import React from "react";
-import { Text } from "react-native";
+import { WebView } from "react-native";
 
 class FeedItemContent extends React.Component {
   render() {
-    return <Text>{this.props.link}</Text>;
+    return (
+      <WebView source={{ uri: this.props.url }} startInLoadingState={true} />
+    );
   }
 }
 

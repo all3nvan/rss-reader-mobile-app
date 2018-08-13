@@ -9,7 +9,7 @@ class Feed extends React.Component {
       <FlatList
         data={this.props.feedItems}
         renderItem={({ item }) => <FeedItem item={item} />}
-        keyExtractor={item => item.link}
+        keyExtractor={item => item.url}
         ItemSeparatorComponent={this.renderSeparator}
       />
     );

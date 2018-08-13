@@ -12,7 +12,7 @@ class FeedItem extends React.Component {
           this,
           FeedItemContentConstants.ROUTE_NAME,
           {
-            [FeedItemContentConstants.LINK_PARAM]: this.props.item.link
+            [FeedItemContentConstants.URL_PARAM]: this.props.item.url
           }
         )}
       >

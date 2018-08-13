@@ -6,9 +6,7 @@ class FeedItemContentNavigator extends React.Component {
   render() {
     return (
       <FeedItemContent
-        link={this.props.navigation.getParam(
-          FeedItemContentConstants.LINK_PARAM
-        )}
+        url={this.props.navigation.getParam(FeedItemContentConstants.URL_PARAM)}
       />
     );
   }
@@ -16,7 +14,7 @@ class FeedItemContentNavigator extends React.Component {
 
 const FeedItemContentConstants = {
   ROUTE_NAME: "FeedItemContentNavigator",
-  LINK_PARAM: "link"
+  URL_PARAM: "url"
 };
 
 export { FeedItemContentConstants };
