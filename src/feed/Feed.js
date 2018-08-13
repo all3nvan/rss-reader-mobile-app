@@ -1,14 +1,14 @@
 import React from "react";
 import { FlatList, View, StyleSheet } from "react-native";
 
-import FeedContentItem from "feed/FeedContentItem";
+import FeedItem from "feed/FeedItem";
 
-class FeedContent extends React.Component {
+class Feed extends React.Component {
   render() {
     return (
       <FlatList
         data={this.props.feedItems}
-        renderItem={({ item }) => <FeedContentItem item={item} />}
+        renderItem={({ item }) => <FeedItem item={item} />}
         keyExtractor={item => item.link}
         ItemSeparatorComponent={this.renderSeparator}
       />
@@ -27,4 +27,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default FeedContent;
+export default Feed;

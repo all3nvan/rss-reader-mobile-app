@@ -1,10 +1,10 @@
 import React from "react";
 
-import FeedContentContainer from "feed/FeedContentContainer";
+import FeedContainer from "feed/FeedContainer";
 
 class RssReaderMobileApp extends React.Component {
   render() {
-    return <FeedContentContainer />;
+    return <FeedContainer />;
   }
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import FeedContent from "feed/FeedContent";
+import Feed from "feed/Feed";
 import { feedItems } from "test-data/TestData";
 
 const mapStateToProps = state => {
@@ -10,6 +10,6 @@ const mapStateToProps = state => {
   };
 };
 
-const FeedContentContainer = connect(mapStateToProps)(FeedContent);
+const FeedContainer = connect(mapStateToProps)(Feed);
 
-export default FeedContentContainer;
+export default FeedContainer;
