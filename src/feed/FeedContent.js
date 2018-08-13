@@ -1,22 +1,30 @@
 import React from "react";
-import { FlatList } from "react-native";
+import { FlatList, View, StyleSheet } from "react-native";
 
 import FeedContentItem from "feed/FeedContentItem";
 
 class FeedContent extends React.Component {
   render() {
-    const keyedFeedItems = this.props.feedItems.map(item => ({
-      key: item.title,
-      item: item
-    }));
-
     return (
       <FlatList
-        data={keyedFeedItems}
-        renderItem={({ item }) => <FeedContentItem item={item.item} />}
+        data={this.props.feedItems}
+        renderItem={({ item }) => <FeedContentItem item={item} />}
+        keyExtractor={item => item.link}
+        ItemSeparatorComponent={this.renderSeparator}
       />
     );
   }
+
+  renderSeparator() {
+    return <View style={styles.separator} />;
+  }
 }
+
+const styles = StyleSheet.create({
+  separator: {
+    height: 1,
+    backgroundColor: "black"
+  }
+});
 
 export default FeedContent;

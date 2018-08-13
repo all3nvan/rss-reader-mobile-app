@@ -1,23 +1,24 @@
 import React from "react";
-import { StyleSheet, Text } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 class FeedContentItem extends React.Component {
   render() {
     return (
-      <Text>
-        <Text>{this.props.item.title}</Text>
-        <Text>{this.props.item.link}</Text>
-        <Text>{this.props.item.description}</Text>
-      </Text>
+      <View>
+        <View>
+          <Text style={styles.title}>{this.props.item.title}</Text>
+        </View>
+        <View>
+          <Text>{this.props.item.description}</Text>
+        </View>
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  contentItem: {
-    marginTop: 20,
-    width: 320,
-    flex: 1
+  title: {
+    fontWeight: "bold"
   }
 });
 
