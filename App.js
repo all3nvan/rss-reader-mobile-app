@@ -1,18 +1,24 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import { createStackNavigator } from "react-navigation";
+import thunkMiddleware from "redux-thunk";
 
 import RssReaderMobileApp from "RssReaderMobileApp";
 import FeedItem, { FeedItemConstants } from "feed/FeedItem";
 import FeedItemContentNavigator, {
   FeedItemContentConstants
 } from "feed/FeedItemContentNavigator";
-import AppReducer from "AppReducer";
+import appReducer from "appReducer";
+import { fetchFeed } from "actions";
 
 class HomeScreen extends React.Component {
-  store = createStore(AppReducer);
+  store = createStore(appReducer, applyMiddleware(thunkMiddleware));
+
+  componentDidMount() {
+    this.store.dispatch(fetchFeed());
+  }
 
   render() {
     return (

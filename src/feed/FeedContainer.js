@@ -2,11 +2,11 @@ import React from "react";
 import { connect } from "react-redux";
 
 import Feed from "feed/Feed";
-import { feedItems } from "test-data/TestData";
 
 const mapStateToProps = state => {
   return {
-    feedItems: feedItems
+    // I guess this needs to know the shape of the state?
+    feedItems: state.feed.items
   };
 };
 

@@ -5,6 +5,7 @@ import FeedItem from "feed/FeedItem";
 
 class Feed extends React.Component {
   render() {
+    // TODO: handle loading logic here and show spinner?
     return (
       <FlatList
         data={this.props.feedItems}
